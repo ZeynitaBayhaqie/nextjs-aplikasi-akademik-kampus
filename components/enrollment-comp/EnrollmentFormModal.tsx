@@ -134,7 +134,7 @@ export default function EnrollmentFormModal({ enrollment, student, course, trigg
             onChange={(e) => handleChange('grade', e.target.value)}
           />
           <Input
-            placeholder="Presentasi Kehadiran"
+            placeholder="Kehadiran"
             value={form.attendance}
             onChange={(e) => handleChange('attendance', e.target.value)}
           />

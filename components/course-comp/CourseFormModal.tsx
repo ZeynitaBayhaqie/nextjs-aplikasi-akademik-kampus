@@ -68,7 +68,7 @@ export default function CourseFormModal({ course, trigger, onSubmit }: Props) {
           />
           <Input
             name="name"
-            placeholder="Nama Matakuliah"
+            placeholder="Nama Mata kuliah"
             value={form.name}
             onChange={handleChange}
           />

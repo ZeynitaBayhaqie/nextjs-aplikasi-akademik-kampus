@@ -43,7 +43,7 @@ const data = {
       icon: IconDashboard,
     },
     {
-      title: "Pengambilan Mata Kuliah",
+      title: "Pengambilan dan nilai Matkul",
       url: "/dashboard/enrollment",
       icon: IconUsers,
     },

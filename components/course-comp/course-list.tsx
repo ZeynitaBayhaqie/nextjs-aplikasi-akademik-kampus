@@ -96,9 +96,9 @@ export default function CourseList() {
         <TableHeader>
           <TableRow>
             <TableHead className="w-[50px]">#</TableHead>
-            <TableHead>Credits</TableHead>
+            <TableHead>SKS</TableHead>
             <TableHead>Semester</TableHead>
-            <TableHead>Name</TableHead>
+            <TableHead>Nama Mata Kuliah</TableHead>
             <TableHead>Code</TableHead>
             <TableHead className="text-right">Aksi</TableHead>
           </TableRow>
