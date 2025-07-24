@@ -115,7 +115,7 @@ export default function EnrollmentList() {
   return (
     <div className="rounded-md border p-4 space-y-4">
       <div className="flex justify-between items-center">
-        <h2 className="text-xl font-semibold">Pendaftar Mata Kuliah</h2>
+        <h2 className="text-xl font-semibold">Pengambilan Mata Kuliah</h2>
         <EnrollmentFormModal
           onSubmit={handleCreate}
           student={student}
@@ -130,7 +130,7 @@ export default function EnrollmentList() {
             <TableHead>Mahasiswa</TableHead>
             <TableHead>Mata Kuliah</TableHead>
             <TableHead>Nilai Akhir</TableHead>
-            <TableHead>Presentase Kehadiran</TableHead>
+            <TableHead>Kehadiran</TableHead>
             <TableHead>Status</TableHead>
             <TableHead className="text-right">Aksi</TableHead>
           </TableRow>

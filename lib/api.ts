@@ -342,3 +342,62 @@ export async function deleteEnrollment(id: number) {
   });
   return res.json();
 }
+
+
+// Definisikan tipe data untuk respons agar lebih mudah digunakan
+export interface DashboardSummary {
+  total_students: number;
+  total_lecturers: number;
+  total_courses: number;
+  total_enrollments: number;
+}
+
+export interface Student {
+  id: number;
+  name: string;
+  NIM: string;
+  major: string;
+  created_at: string; // Tanggal dalam format string ISO
+}
+
+
+/**
+ * Mengambil data ringkasan dari backend untuk ditampilkan di dashboard.
+ */
+export async function fetchDashboardSummary(): Promise<DashboardSummary> {
+  const res = await fetch(`${BASE_URL}/dashboard/summary`, {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${getToken()}`,
+    },
+  });
+
+  if (!res.ok) {
+    const errorData = await res.json();
+    throw new Error(errorData.message || "Gagal mengambil data dashboard");
+  }
+
+  return res.json();
+}
+
+/**
+ * Mengambil daftar mahasiswa terbaru dari backend.
+ */
+export async function fetchRecentStudents(): Promise<Student[]> {
+  // Pastikan backend Anda mendukung parameter ?sort=desc&limit=5
+  const res = await fetch(`${BASE_URL}/student`, {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${getToken()}`,
+    },
+  });
+
+  if (!res.ok) {
+    const errorData = await res.json();
+    throw new Error(errorData.message || "Gagal mengambil data mahasiswa");
+  }
+  
+  const responseData = await res.json();
+  // Sesuaikan jika data mahasiswa ada di dalam properti tertentu, misal: responseData.data
+  return Array.isArray(responseData) ? responseData : responseData.data || [];
+}
