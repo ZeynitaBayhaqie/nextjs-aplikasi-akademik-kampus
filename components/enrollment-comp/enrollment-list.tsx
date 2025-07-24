@@ -127,10 +127,11 @@ export default function EnrollmentList() {
         <TableHeader>
           <TableRow>
             <TableHead className="w-[50px]">#</TableHead>
-            <TableHead>ID Mahasiswa</TableHead>
-            <TableHead>ID Mata Kuliah</TableHead>
+            <TableHead>Mahasiswa</TableHead>
+            <TableHead>Mata Kuliah</TableHead>
             <TableHead>Nilai Akhir</TableHead>
             <TableHead>Presentase Kehadiran</TableHead>
+            <TableHead>Status</TableHead>
             <TableHead className="text-right">Aksi</TableHead>
           </TableRow>
         </TableHeader>

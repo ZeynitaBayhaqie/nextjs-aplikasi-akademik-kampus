@@ -66,13 +66,6 @@ export default function StudentList() {
     }
   };
 
-// const formatRupiah = (angka: number) =>
-//   new Intl.NumberFormat("id-ID", {
-//     style: "currency",
-//     currency: "IDR",
-//     minimumFractionDigits: 0,
-//   }).format(angka);
-
   const handleCreate = async (data: any) => {
     const token = localStorage.getItem("token");
     try {

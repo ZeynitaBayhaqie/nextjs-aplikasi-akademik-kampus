@@ -39,7 +39,7 @@ export function LoginForm({
       if (res.token) {
         // Simpan token ke localStorage atau cookies
         localStorage.setItem("token", res.token);
-        localStorage.setItem("NIM", JSON.stringify(res.NIM));
+        localStorage.setItem("user", JSON.stringify(res.user));
 
         // Redirect ke dashboard
         toast.success("Login berhasil!");
@@ -72,7 +72,7 @@ export function LoginForm({
             <div className="grid gap-6">
               <div className="grid gap-6">
                 <div className="grid gap-3">
-                  <Label htmlFor="text">Nim</Label>
+                  <Label htmlFor="email">NIM</Label>
                   <Input
                     id="NIM"
                     type="text"
@@ -86,12 +86,7 @@ export function LoginForm({
                 <div className="grid gap-3">
                   <div className="flex items-center">
                     <Label htmlFor="password">Password</Label>
-                    <a
-                      href="#"
-                      className="ml-auto text-sm underline-offset-4 hover:underline"
-                    >
-                      Forgot your password?
-                    </a>
+
                   </div>
                   <div className="relative">
                     <Input
@@ -116,7 +111,7 @@ export function LoginForm({
               </div>
               <div className="text-center text-sm">
                 Don&apos;t have an account?{" "}
-                <a href="#" className="underline underline-offset-4">
+                <a href="/signup" className="underline underline-offset-4">
                   Sign up
                 </a>
               </div>

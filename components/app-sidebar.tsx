@@ -18,10 +18,7 @@ import {
   IconSettings,
   IconUsers,
 } from "@tabler/icons-react"
-
-import { NavDocuments } from "@/components/nav-documents"
 import { NavMain } from "@/components/nav-main"
-import { NavSecondary } from "@/components/nav-secondary"
 import { NavUser } from "@/components/nav-user"
 import {
   Sidebar,
@@ -46,27 +43,27 @@ const data = {
       icon: IconDashboard,
     },
     {
-      title: "Enrollment",
+      title: "Pengambilan Mata Kuliah",
       url: "/dashboard/enrollment",
       icon: IconUsers,
     },
     {
-      title: "Course",
+      title: "Mata Kuliah",
       url: "/dashboard/course",
       icon: IconListDetails,
     },
     {
-      title: "Course Lecturer",
+      title: "Dosen Mata Kuliah",
       url: "/dashboard/courselecturer",
       icon: IconChartBar,
     },
     {
-      title: "Lecturer",
+      title: "Dosen",
       url: "/dashboard/lecturer",
       icon: IconFolder,
     },
     {
-      title: "Student",
+      title: "Mahasiswa",
       url: "/dashboard/student",
       icon: IconUsers,
     },

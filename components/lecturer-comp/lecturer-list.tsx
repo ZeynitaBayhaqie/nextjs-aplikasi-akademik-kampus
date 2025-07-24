@@ -98,7 +98,7 @@ export default function LecturerList() {
             <TableHead className="w-[50px]">#</TableHead>
             <TableHead>Nama Dosen</TableHead>
             <TableHead>NIP</TableHead>
-            <TableHead>Dapartement Dosen</TableHead>
+            <TableHead>Dosen Jurusan</TableHead>
             <TableHead>Email</TableHead>
             <TableHead className="text-right">Aksi</TableHead>
           </TableRow>

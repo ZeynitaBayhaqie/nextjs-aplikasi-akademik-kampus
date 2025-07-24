@@ -97,7 +97,7 @@ export default function StudentFormModal({ student, trigger, onSubmit }: Props) 
           />
           <Input
             name="password"
-            placeholder="Password"
+            placeholder="Password minimal 8"
             type="password"
             value={form.password}
             onChange={handleChange}
